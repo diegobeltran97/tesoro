@@ -5,7 +5,7 @@ import java.util.*;
 public class Butones implements ActionListener
 {
    JFrame ventana;
-   JButton btn_boton, btn_tmp,buton2, btn_iniciar;
+   JButton btn_boton, btn_tmp, btn_iniciar;
    JLabel lbl_x, lbl_y;
    JTextField tf_x, tf_y;
   
@@ -71,19 +71,24 @@ public class Butones implements ActionListener
    public void crear()
    {
       int i;
-      System.out.println("crear");
-      
+      int x,y,a = 20,b = 30;
+      //System.out.println("En x");
+     
+      for (i=0;i< 3 ;i++)
+      {
+    	 
+ 
+    	 y = (20 * i )+ 20;
+    	 x = (y - 20 ) / 30;
+    	
+    	 
          btn_boton = new JButton();
-         btn_boton.setBounds(50, 40,30,20);
+         btn_boton.setBounds( x , y , 30, 20);
          btn_boton.addActionListener(this);
          ventana.add(btn_boton);
-         
-         btn_boton = new JButton();
-         btn_boton.setBounds(50+32,40 ,30,20);
-         btn_boton.addActionListener(this);
-         ventana.add(btn_boton);
-      
-         ventana.repaint();
+      }
+    //System.out.println("En x");
+      ventana.repaint();
 
    }
    
